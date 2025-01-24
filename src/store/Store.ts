@@ -1,6 +1,6 @@
 type userId = string;
 
-interface Chat {
+export interface Chat {
     userId: string;
     name: string;
     message: string;
@@ -10,7 +10,7 @@ export abstract class Store{
     constructor( ){
 
     } 
-    initRoom() {
+    initRoom(roomId: string) {
 
     }
     getChats(room: string, limit: number, offset: number){
