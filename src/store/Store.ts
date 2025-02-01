@@ -5,22 +5,27 @@ export interface Chat {
     userId: UserId;
     name: string;
     message: string;
-    upvotes: UserId[];
+    upvotes: UserId[]; // who has upvoited what 
 }
-export abstract class Store{
-    constructor( ){
 
-    } 
+export abstract class Store {
+    constructor() {
+
+    }
     initRoom(roomId: string) {
 
     }
-    getChats(room: string, limit: number, offset: number){
+
+    getChats(room: string, limit: number, offset: number) {
 
     }
-    addChat(userId: UserId, name: string, room: string, message: string){
+
+    addChat(userId: UserId, name: string, room: string, message: string) {
 
     }
-    upvote(userId: UserId, room: string, chatId: string){
+
+    upvote(userId: UserId, room: string, chatId: string) {
 
     }
+
 }

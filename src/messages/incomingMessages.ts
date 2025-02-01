@@ -1,9 +1,9 @@
 import z from "zod";
 
 export enum SupportedMessage {
-    JoinRoom = "JOIN_ROOM",
+    JoinRoom =  "JOIN_ROOM",
     SendMessage = "SEND_MESSAGE",
-    UpvoteMessage = "UPVOTE_MESSAGE"
+    UpvoteMessage = "UPVOTE_MESSAGE",   
 }
 
 export type IncomingMessage = {
@@ -13,13 +13,13 @@ export type IncomingMessage = {
     type: SupportedMessage.SendMessage,
     payload: UserMessageType
 } | {
-    type: SupportedMessage.UpvoteMessage
+    type: SupportedMessage.UpvoteMessage,
     payload: UpvoteMessageType
 };
 
-const InitMessage =  z.object({
+export const InitMessage = z.object({
     name: z.string(),
-    userId: z.string(),
+    userId: z.string(), 
     roomId: z.string(),
 })
 
